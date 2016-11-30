@@ -1,0 +1,4 @@
+ECE 4564 Sample Text File for Project 2 Testing.
+This should be the second line.
+This should be the third line.
+This should be the fourth line.

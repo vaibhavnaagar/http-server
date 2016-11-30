@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+<TITLE>ECE 4564 Project 2 Test</TITLE>
+</HEAD>
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#8000FF" ALINK="FF0000" BGCOLOR="#FFFFFF">
+
+<CENTER>
+<FONT SIZE=+1><B>Virginia Tech
+<BR>ECE 4564
+<BR>Network Application Design</B></FONT>
+<H2>Project 2 Test File</H2>
+<HR NOSHADE SIZE=4>
+<B>
+[<A HREF="#Introduction">Introduction</A>]
+[<A HREF="#Files">Files</A>]
+[<A HREF="#Functionality">Functionality</A>]
+[<A HREF="#Performance">Performance</A>]
+[<A HREF="#Images">Images</A>]
+</B>
+<HR NOSHADE SIZE=4>
+</CENTER>
+
+
+
+<H3><A NAME="Introduction">Introduction</A></H3>
+<P>
+This page and the set of associated files are designed to test your Project 2 HTTP server.  Use your browser's
+options to try and force both HTTP/1.1 and HTTP/1.0 behavior.
+
+
+<H3><A NAME="Files">Test Files</A></H3>
+<P>
+You should have the following files using the indicated directory structure.
+<I>base_directory</I> is the directory on the server host used as the base
+directory by your server.  For example, the <TT>URI /index.html</TT> should
+retrieve this file.
+<P>
+<TT>
+<I>base_directory</I>
+<UL>
+<I>images</I>
+<UL>
+thm01.gif
+<BR>thm02.gif
+<BR>thm03.gif
+<BR>thm04.gif
+<BR>thm05.gif
+<BR>thm06.gif
+<BR>neb01.jpg
+<BR>neb02.jpg
+<BR>neb03.jpg
+<BR>neb04.jpg
+<BR>neb05.jpg
+<BR>neb06.jpg
+<BR>page.html
+<BR>vt.gif
+</UL>
+index.html
+<BR>kingstrt.jpg
+<BR>marina.jpg
+<BR>post_test.html
+<BR>potomac.jpg
+<BR>pdf_sample.pdf
+<BR>text_sample.txt
+</UL>
+</TT>
+
+
+<H3><A NAME="Functionality">Testing Functionality</A></H3>
+<P>
+Do the following to test the functionality of your server.
+<OL>
+
+<LI>You should be able to load this page using either of the following URLs:
+<UL>
+<LI>http://<I>hostname</I>/index.html
+<LI>http://<I>hostname</I>/
+</UL>
+<P>
+Fill in <I>hostname</I> as appropriate.  If you are running your server and the
+browser on the same host, then you can use localhost as the hostname.
+<P>
+After loading this page, your browser will retrieve the embedded images from
+the server.  There are a number of embedded images and your browser should
+open multiple connections to simultaneously retrieve image files.
+
+<P><LI>The following three links should all load this page:
+<A HREF="index.html"><B>index.html</B></A>,
+<A HREF="/index.html"><B>/index.html</B></A>, and
+<A HREF="/"><B>/</B></A>.
+
+<P><LI>The following link should load another HTML page:
+<A HREF="images/page.html"><B>page.html</B></A>.
+
+<P><LI>The following link should load a JPEG file (which happens to be NEB 261 in its
+infancy):  <A HREF="/images/neb005.jpg"><B>neb005.jpg</B></A>.
+
+<P><LI>The following link should load a GIF file:
+<A HREF="/images/thm001.gif"><B>thm001.gif</B></A>.
+
+<P><LI>The following link should load a PDF file:
+<A HREF="/pdf_sample.pdf"><B>pdf_sample.pdf</B></A>.
+
+<P><LI>The following link should load a text file:
+<A HREF="text_sample.txt"><B>text_sample.txt</B></A>.
+
+
+
+<P><LI>If you implemented a directory listing option, the following
+link should return a listing of the images directory:
+<A HREF="images/"><B>images directory listing</B></A>.  If you provide a
+hyperlinked directory, clicking on each file name should load the image.
+
+<P><LI>This is a <A HREF="no_such_file.htm"><B>bad link</B></A>.
+
+<P><LI>If you implemented optional support for the POST method, use the following
+file for testing:  <A HREF="post_test.html"><B>post_test.html</B></A>.
+
+<P><LI>At this point, the only suggestion for testing the optional support for the
+HEAD method is to use the Castalia Socket Tester or iego's Connecting Sockets to generate a HEAD request.
+
+</OL>
+
+
+<HR NOSHADE SIZE=4>
+<H3><A NAME="Images">Embedded Images</A></H3>
+<P>
+16 good images and one image that cannot be loaded should appear below.
+<P>
+<CENTER>
+<IMG SRC="images/vt.gif" WIDTH=180 HEIGHT=78>
+</CENTER>
+
+<H4>New Engineering Building Construction Scenes</H4>
+<A HREF="images/neb001.jpg"><IMG SRC="images/neb001.jpg" WIDTH=160 HEIGHT=120></A>
+<IMG SRC="images/thm001.gif" WIDTH=106 HEIGHT=80>
+<A HREF="images/neb002.jpg"><IMG SRC="images/neb002.jpg" WIDTH=160 HEIGHT=120></A>
+<IMG SRC="images/thm002.gif" WIDTH=106 HEIGHT=80>
+<A HREF="images/neb003.jpg"><IMG SRC="images/neb003.jpg" WIDTH=160 HEIGHT=120></A>
+<IMG SRC="images/thm003.gif" WIDTH=106 HEIGHT=80>
+<A HREF="images/neb004.jpg"><IMG SRC="images/neb004.jpg" WIDTH=160 HEIGHT=120></A>
+<IMG SRC="images/thm004.gif" WIDTH=106 HEIGHT=80>
+<A HREF="images/neb005.jpg"><IMG SRC="images/neb005.jpg" WIDTH=160 HEIGHT=120></A>
+<IMG SRC="images/thm005.gif" WIDTH=106 HEIGHT=80>
+<A HREF="images/neb006.jpg"><IMG SRC="images/neb006.jpg" WIDTH=160 HEIGHT=120></A>
+<IMG SRC="images/thm006.jpg" WIDTH=106 HEIGHT=80>
+
+<H4>Alexandria Scenes</H4>
+<IMG SRC="marina.jpg" WIDTH=382 HEIGHT=252>
+<BR><IMG SRC="potomac.jpg" WIDTH=382 HEIGHT=252>
+<BR><IMG SRC="kingstrt.jpg" WIDTH=382 HEIGHT=252>
+</CENTER>
+
+<H4>Bad Image</H4>
+<IMG SRC="images/badfile.gif" WIDTH=106 HEIGHT=80>
+
+
+<P>
+<HR NOSHADE SIZE=4>
+<FONT SIZE=-1>
+<CITE>
+Last updated: September 26, 2002
+<BR>&copy; 1998-2002 <A HREF="http://www.ece.vt.edu/faculty/midkiff.html">Scott F. Midkiff</A>
+</CITE>
+</FONT>
+</BODY>
+</HTML>
