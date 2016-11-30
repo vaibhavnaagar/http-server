@@ -1,6 +1,8 @@
 
 
 # Concurrent HTTP-Server #
+>CS425: Computer Networking (Project-1)
+						
 
 * Server supports the GET method to retrieve files from it.
 * It can handle requests from both protocols HTTP/1.1 and HTTP/1.0 .
@@ -8,13 +10,16 @@
 * Server perfectly provides appropriate Status-code and Response-Phrase values in response to errors or incorrect requests from client.
 * Server makes persistent connections with clients upto certain extent i.e. once the connection is established between server and client, server then starts handling requests from it using same connection and process until client closes the connection.
 * Server is designed such that it can run continuously until an unrecoverable error occurs.
-
+* Server replies with a hyperlinked directory listing if a directory is the requested resource.
 
 ### How to use it ###
 
 * Run makefile using command "make" or "make all".
 * It creates one execuatble file `http-server`.
-* Run server using command: ./http-server [-p port-number] [-b base_directory]
+* Run server using command: 
+```sh 
+./http-server [-p port-number] [-b base_directory] 
+```
 * Arguments are optional 
 * IMPORTANT: Base directory is default set to `webfiles` folder present in this same folder.
 
